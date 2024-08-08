@@ -1,0 +1,11 @@
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetFrameworkPractice.exe.config
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetFrameworkPractice.exe
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetFrameworkPractice.pdb
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetStandardPractice.dll
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetStandardPractice.pdb
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.csproj.AssemblyReference.cache
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.csproj.SuggestedBindingRedirects.cache
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.csproj.CoreCompileInputs.cache
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.csproj.CopyComplete
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.exe
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.pdb

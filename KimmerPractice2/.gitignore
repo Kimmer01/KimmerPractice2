@@ -1,0 +1,12 @@
+# Visual Studio 2015/2017 cache/options directory
+.vs\
+
+
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+
+
+*.suo
+*.assets.cache
+*.FileListAbsolute.txt
