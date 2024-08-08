@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "UbNpphXY+deivy3Vq+1wfqjgAxcHsAM8mGIcfIM2G5yaWpubC/cTLUX/F3Li7UX9rTNbj+bUeJldqkeqMnJCcA==",
+  "success": true,
+  "projectFilePath": "D:\\Practice\\KimmerPractice2\\KimmerPractice2\\DotnetCorePractice\\DotnetCorePractice.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://rsp-poc-secommunity:11000/repository/nuget-group/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
