@@ -9,3 +9,7 @@ D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\Do
 D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.csproj.CopyComplete
 D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.exe
 D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.pdb
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetFrameworkPractice.exe.manifest
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\bin\Debug\DotnetFrameworkPractice.application
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.exe.manifest
+D:\Practice\KimmerPractice2\KimmerPractice2\DotnetFrameworkPractice\obj\Debug\DotnetFrameworkPractice.application
