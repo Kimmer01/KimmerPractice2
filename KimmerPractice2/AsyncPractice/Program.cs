@@ -34,12 +34,27 @@
 
             //await TestAwaitThreadAsync(@"https://www.baidu.com/", @"C:\Users\kimmer_wang\Downloads\KimmerTest.txt","Test");
 
+            #region - TestAwaitThreadAsync
             //Console.WriteLine($"Before threadId: {Thread.CurrentThread.ManagedThreadId}");
-            //await TestAwaitThreadAsync(5000);
-            //Console.WriteLine($"After threadId: {Thread.CurrentThread.ManagedThreadId}");
 
-            string str = await TestAsyncMethodWithoutAsyncKeyWordAsync(2);
-            Console.WriteLine(str);
+            //CancellationTokenSource cts = new CancellationTokenSource();
+            //cts.CancelAfter(10);
+            //await TestAwaitThreadAsync(500000, cts.Token);
+            //Console.WriteLine($"After threadId: {Thread.CurrentThread.ManagedThreadId}");
+            #endregion
+
+            //string str = await TestAsyncMethodWithoutAsyncKeyWordAsync(2);
+            //Console.WriteLine(str);
+
+            //Task<string> t1 = File.ReadAllTextAsync(@"C:\Users\kimmer_wang\Downloads\KimmerTest1.txt");
+            //Task<string> t2 = File.ReadAllTextAsync(@"C:\Users\kimmer_wang\Downloads\KimmerTest2.txt");
+
+            //string[] result = await Task.WhenAll(t1, t2);
+            //Console.WriteLine(result[0]);
+            //Console.WriteLine(result[1]);
+
+            int count = await CountFilesStringLengthAsync(@"C:\Users\kimmer_wang\Downloads\New folder\PdfService");
+            Console.WriteLine(count);
         }
 
         /// <summary>
@@ -56,8 +71,15 @@
         /// 可能会占用非常多的线程
         /// </para>
         /// 4. 如果想在 async 方法中等待一段时间，不要使用 Thread.Sleep()， 因为会阻塞当前线程；使用 await Task.Delay()
+        /// 5. .net core 程序的 action 都可以加一个 CancellationToken 参数，当用户关闭当前网页时，会 cancel，可以节约资源 TODO: 如何应用到PIEX项目
+        /// 6. Task.WhenAll & Task.WhenAny
+        /// 7. async 试提示编译器为异步代码中的 await 代码进行分段处理的，而一个异步方法是否修饰了 async 对于方法的调用者来说是没区别的。因此对于接口中的方法或者抽象方法不能修饰为 async，将返回值标为 Task 即可
+        /// 8. yield return(也是编译成一个类) 能够简化数据的返回，而且可以让数据处理‘流水线化’，提升性能
+        /// <para>
+        /// IAsyncEnumerable
+        /// </para>
         /// </summary>
-        static async Task<double> TestAwaitThreadAsync(int times)
+        static async Task<double> TestAwaitThreadAsync(int times, CancellationToken cancellationToken)
         {
             //Console.WriteLine($"{nameof(TestAwaitThreadAsync)} threadId: {Thread.CurrentThread.ManagedThreadId}");
             //double result = 0;
@@ -77,6 +99,12 @@
                 for (int n = 0; n < times; n++)
                 {
                     result += rand.NextDouble();
+
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        Console.WriteLine($"The task was cancelled. n = {n}");
+                        break;
+                    }
                 }
 
                 return result;
@@ -102,7 +130,7 @@
                     throw new ArgumentException();
             }
         }
-
+        
 
         static Task<double> TestAwaitThreadWithoutAsyncKeyWordAsync(int times)
         {
@@ -178,6 +206,28 @@
 
                 return content.Length;
             }
+        }
+
+        static async Task<int> CountFilesStringLengthAsync(string folderPath)
+        {
+            string[] files = Directory.GetFiles(folderPath);
+            Task<int>[] lengthTasks = new Task<int>[files.Length];
+            for (int i = 0; i < files.Length; i++)
+            {
+                string file = files[i];
+                lengthTasks[i] = CountFileStringLengthAsync(file);
+            }
+            
+            int[] lengths = await Task.WhenAll(lengthTasks);
+            int count = lengths.Sum();
+
+            return count;
+        }
+
+        static async Task<int> CountFileStringLengthAsync(string fileName)
+        {
+            string content = await File.ReadAllTextAsync(fileName);
+            return content.Length;
         }
     }
 }
