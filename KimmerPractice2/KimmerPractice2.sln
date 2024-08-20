@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncPractice", "AsyncPract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncWeb", "AsyncWeb\AsyncWeb.csproj", "{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqPractice", "LinqPractice\LinqPractice.csproj", "{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
