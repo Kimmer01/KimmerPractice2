@@ -1,4 +1,7 @@
-﻿namespace LinqPractice
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace LinqPractice
 {
     internal class Program
     {
@@ -21,6 +24,10 @@
 
             Func<int, int, string> a21 = Test21();
             a21(1, 3);
+
+            List<int> ints = new List<int>() { 10, 5, 80, 8 };
+            IEnumerable<int> wherePracticeResult = WherePractice(ints, i => i > 10);
+            Console.WriteLine(string.Join(",", wherePracticeResult));
         }
 
 
@@ -67,11 +74,43 @@
         /// <summary>
         /// 如果只有一个参数，参数的 () 可以省略
         /// </summary>
-        /// <returns></returns>
+        /// <returns></returns> 
         static Func<int, bool> Test23()
         {
             Func<int, bool> a = i => i > 5;
             return a;
+        }
+
+        /// <summary>
+        /// 1. LINQ 中提供了很多 集合(IEnumerable) 的扩展方法(大部分都在 System.Linq 命名空间中)，配合 lambda 能简化数据处理
+        /// <p>For example:
+        /// .Any(), .Count(), .Single(), .SingleOrDefault(), .First(), .FirstOrDefault()
+        /// 返回值 IOrderedEnumerable: .OrderBy().ThenBy(), .OrderByDescending().ThenByDescending()
+        /// .Skip()
+        /// .Take(3) 取最多3条，如果只有2条，则取2条
+        /// 聚合函数：.Max(), .Min(), Average(), .Sum(), .Count()
+        /// 返回值 IGrouping<TKey, TSource>: .GroupBy()
+        /// 投影操作: list.Select(l => new Class(l)); 把集合中的每一项转换成另一种类型
+        /// 匿名类型: var newList = list.Select(l => new {Name = "AAA", Age=10});
+        /// 以上是 ‘LINQ方法语法’，还有一种‘查询语法’的写法，和写 SQL 类似。两种写法，编译器编译的结果是一样的
+        ///     from l in list
+        ///     where l.Age>10
+        ///     orderby l.Salary
+        ///     select new {Age = l.Age, Gender = l.Gender?"男":"女"};
+        /// </p>
+        /// 2. yield return '流水线'式处理，效率更高
+        /// 3. C# 中的 var 依然是强类型的，编译时会根据赋值判断类型。编译器的“类型推断”
+        /// </summary>
+        static IEnumerable<T> WherePractice<T>(IEnumerable<T> list, Func<T, bool> func)
+        {
+            foreach (T item in list)
+            {
+                if (func(item))
+                {
+                    yield return item;
+                }
+            }
+
         }
     }
 }
