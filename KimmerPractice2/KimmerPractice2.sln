@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCorePractice", "Dotne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncPractice", "AsyncPractice\AsyncPractice.csproj", "{2ECB4230-07E3-48E7-854B-D9E824F976D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncWeb", "AsyncWeb\AsyncWeb.csproj", "{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncWeb", "AsyncWeb\AsyncWeb.csproj", "{0C4830DC-5BF3-47DF-9AE6-814F243D3DEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqPractice", "LinqPractice\LinqPractice.csproj", "{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqPractice", "LinqPractice\LinqPractice.csproj", "{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCPractice", "IOCPractice\IOCPractice.csproj", "{4C996732-EAD5-4B1F-BB66-627D404B1097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
