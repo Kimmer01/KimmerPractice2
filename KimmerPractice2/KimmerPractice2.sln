@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncWeb", "AsyncWeb\AsyncW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqPractice", "LinqPractice\LinqPractice.csproj", "{CEEBC5B8-D010-4CB9-BFB6-ADD9F0683E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCPractice", "IOCPractice\IOCPractice.csproj", "{4C996732-EAD5-4B1F-BB66-627D404B1097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOCPractice", "IOCPractice\IOCPractice.csproj", "{4C996732-EAD5-4B1F-BB66-627D404B1097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCProject1Practice", "IOCProject1Practice\IOCProject1Practice.csproj", "{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C996732-EAD5-4B1F-BB66-627D404B1097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
