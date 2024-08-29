@@ -1,0 +1,7 @@
+﻿{
+  "name": "kimmer0",
+  "age": 100,
+  "proxy": {
+    "address": "test address"
+  }
+}
