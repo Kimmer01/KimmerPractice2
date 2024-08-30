@@ -14,7 +14,10 @@ namespace ConfigPractice
         static void Main(string[] args)
         {
             ConfigurationBuilder configBuilder = new();
-            configBuilder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+            //configBuilder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+            //configBuilder.AddCommandLine(args);
+            configBuilder.AddEnvironmentVariables("KT_");
+
             IConfigurationRoot configRoot = configBuilder.Build();
             //string name = configRoot["name"];
             //string proxyAddress = configRoot.GetSection("proxy:address").Value;
@@ -30,7 +33,6 @@ namespace ConfigPractice
             services.AddOptions()
                 .Configure<Config>(e => configRoot.Bind(e))
                 .Configure<Proxy>(e => configRoot.GetSection("proxy").Bind(e));
-            
 
             using (ServiceProvider sp = services.BuildServiceProvider())
             {
@@ -63,4 +65,6 @@ class Config
 class Proxy
 {
     public string Address { get; set; }
+
+    public List<int> Ids { get; set; }
 }

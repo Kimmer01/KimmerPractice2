@@ -18,6 +18,8 @@ internal class Test2
 
     public void Test()
     {
+        Console.WriteLine("______________________________");
         Console.WriteLine(_config.Value.Address);
+        Console.WriteLine(string.Join(",", _config.Value.Ids));
     }
 }
