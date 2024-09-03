@@ -9,6 +9,10 @@ namespace ConfigPractice;
 
 internal class FxConfigurationProvider : FileConfigurationProvider
 {
+    public FxConfigurationProvider(FileConfigurationSource source) : base(source)
+    {
+    }
+
     public override void Load(Stream stream)
     {
         throw new NotImplementedException();

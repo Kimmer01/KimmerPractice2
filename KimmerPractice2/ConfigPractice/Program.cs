@@ -22,8 +22,8 @@ namespace ConfigPractice
             //string name = configRoot["name"];
             //string proxyAddress = configRoot.GetSection("proxy:address").Value;
 
-            Proxy p = configRoot.GetSection("proxy").Get<Proxy>();
-            Config c = configRoot.Get<Config>();
+            //Proxy p = configRoot.GetSection("proxy").Get<Proxy>();
+            //Config c = configRoot.Get<Config>();
 
             ServiceCollection services = new ServiceCollection();
             services.AddScoped<TestConfig>();

@@ -1,0 +1,13 @@
+﻿<configuration>
+  <ConnectionStrings>
+    <add name="connextionStr1" connectionString="TestConnectionString1" provider="TestProvider1"/>
+    <add name="connextionStr2" connectionString="TestConnectionString2" provider="TestProvider2"/>
+  </ConnectionStrings>
+
+  <appSettings>
+    <add name="config:Name" value="Kimmer"/>
+    <add name="Config,age" value="200"/>
+    <add name="config.Proxy:Address" value="1688 street"/>
+    <add name="Config.Proxy:ids" value="10;20;30"/>
+  </appSettings>
+</configuration>

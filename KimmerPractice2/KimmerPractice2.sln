@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOCPractice", "IOCPractice\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOCProject1Practice", "IOCProject1Practice\IOCProject1Practice.csproj", "{74D14096-1BA0-48AA-87E3-51A0CF5E4BCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigPractice", "ConfigPractice\ConfigPractice.csproj", "{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigPractice", "ConfigPractice\ConfigPractice.csproj", "{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigPractice2", "ConfigPractice2\ConfigPractice2.csproj", "{0E367FEA-597B-47E3-B29E-808BDD816D41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
