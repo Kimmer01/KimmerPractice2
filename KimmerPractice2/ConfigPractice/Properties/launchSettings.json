@@ -2,9 +2,9 @@
   "profiles": {
     "ConfigPractice": {
       "commandName": "Project",
-      "commandLineArgs": "name=KImmer age=200 proxy:address=testAddressCommand proxy:ids:0=0 proxy:ids:1=1",
+      "commandLineArgs": "name=KImmerC age=200 proxy:address=testAddressCommand proxy:ids:0=0 proxy:ids:1=1",
       "environmentVariables": {
-        "KT_name": "KIMMER",
+        "KT_name": "KIMMERE",
         "KT_age": "500",
         "KT_proxy:address": "testAddressEnvironment",
         "KT_proxy:ids:0": "10",

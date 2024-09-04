@@ -15,8 +15,8 @@ namespace ConfigPractice
         {
             ConfigurationBuilder configBuilder = new();
             //configBuilder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
-            //configBuilder.AddCommandLine(args);
             configBuilder.AddEnvironmentVariables("KT_");
+            configBuilder.AddCommandLine(args);
 
             IConfigurationRoot configRoot = configBuilder.Build();
             //string name = configRoot["name"];

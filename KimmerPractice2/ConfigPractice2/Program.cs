@@ -9,6 +9,7 @@ namespace ConfigPractice2
         {
             IConfigurationBuilder builder = new ConfigurationBuilder();
             builder.Add(new KimConfihurationSource() { Path = "WebConfig.xml" });
+            builder.AddUserSecrets<Program>();
             IConfigurationRoot configRoot = builder.Build();
 
             ServiceCollection services = new ServiceCollection();
