@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOCProject1Practice", "IOCP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigPractice", "ConfigPractice\ConfigPractice.csproj", "{5D665BFF-EDC5-4219-BE4C-6C6254D78E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigPractice2", "ConfigPractice2\ConfigPractice2.csproj", "{0E367FEA-597B-47E3-B29E-808BDD816D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigPractice2", "ConfigPractice2\ConfigPractice2.csproj", "{0E367FEA-597B-47E3-B29E-808BDD816D41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogPractice", "LogPractice\LogPractice.csproj", "{05387378-7ECB-4B07-9C47-4E75ED8A5CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationMVC", "WebApplicationMVC\WebApplicationMVC.csproj", "{275215E5-3B4E-408C-9F29-CCA0FA614EA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E367FEA-597B-47E3-B29E-808BDD816D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05387378-7ECB-4B07-9C47-4E75ED8A5CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05387378-7ECB-4B07-9C47-4E75ED8A5CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05387378-7ECB-4B07-9C47-4E75ED8A5CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05387378-7ECB-4B07-9C47-4E75ED8A5CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275215E5-3B4E-408C-9F29-CCA0FA614EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275215E5-3B4E-408C-9F29-CCA0FA614EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275215E5-3B4E-408C-9F29-CCA0FA614EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275215E5-3B4E-408C-9F29-CCA0FA614EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
