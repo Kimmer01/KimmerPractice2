@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Reflection.Metadata.Ecma335;
 
 namespace IOCPractice
 {
@@ -24,6 +25,11 @@ namespace IOCPractice
             services.AddTransient<ITestService, TestServiceImp2>();
             //services.AddTransient<ITestService, TestServiceImp1>();
 
+            services.AddScoped<Dependancy2, Dependancy2>();
+            services.AddScoped<Dependancy, Dependancy>();
+            Func<IServiceProvider, Practice> implementationFactory = (p) => new Practice("Kimmer", p.GetService(typeof(Dependancy)) as Dependancy);
+            services.AddScoped(typeof(Practice), implementationFactory);
+
             ITestService t;
             using (ServiceProvider sp = services.BuildServiceProvider())
             {
@@ -36,6 +42,12 @@ namespace IOCPractice
                 t1.SayHi();
                 Console.WriteLine(t1 == t2);
                 t = t1;
+
+                Dependancy dependancy = sp.GetService(typeof(Dependancy)) as Dependancy;
+                dependancy.Test();
+
+                Practice practice = sp.GetService(typeof(Practice)) as Practice;
+                practice.Test();
             }
 
             using (ServiceProvider sp2 = services.BuildServiceProvider())
