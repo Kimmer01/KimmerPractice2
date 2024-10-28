@@ -1,3 +1,6 @@
+﻿
+using EFCorePractice;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplicationWebAPI
 {
@@ -14,6 +17,16 @@ namespace WebApplicationWebAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddMemoryCache();//IMemoryCache, 建议使用 GetOrCreateAsync，可以避免缓存穿透问题(查询结果为 null，导致每次都访问数据库)
+            //缓存雪崩(缓存项集中过期，导致对数据库的访问，每隔一段时间就剧增。解决方案：再基础过期时间之上，再加一个随机过期时间)
+
+            //Scoped
+            builder.Services.AddDbContext<MyDbContext>(opt =>
+            {
+                string connStr = builder.Configuration.GetSection("ConnectionString").Value;
+                opt.UseSqlServer(connStr);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,8 +40,11 @@ namespace WebApplicationWebAPI
 
             app.UseAuthorization();
 
-
+            //app.UseResponseCaching();
             app.MapControllers();
+
+            string conn = app.Configuration.GetSection("ConnectionStr").Value;
+            Console.WriteLine(conn);
 
             app.Run();
         }

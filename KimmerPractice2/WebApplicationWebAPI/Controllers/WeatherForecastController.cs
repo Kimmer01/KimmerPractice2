@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApplicationWebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -12,12 +12,15 @@ namespace WebApplicationWebAPI.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWebHostEnvironment env)
         {
             _logger = logger;
+            _env = env;
         }
 
+        //[ResponseCache(Duration = 50)]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -28,6 +31,12 @@ namespace WebApplicationWebAPI.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet]
+        public string EnvDemo()
+        {
+            return _env.EnvironmentName;
         }
     }
 }
