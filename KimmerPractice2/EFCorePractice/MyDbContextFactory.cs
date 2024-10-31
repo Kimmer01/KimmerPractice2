@@ -21,7 +21,7 @@ namespace EFCorePractice
     /// 在EFCore项目中创建一个实现了IDesignTimeDbContextFactory的类。
     /// 并且在CreateDbContext返回一个连接开发数据库的DbContext。
     /// 如果不在乎连接字符串被上传到Git，就可以把连接字符串直接写死到CreateDbContext；如果在乎，那么CreateDbContext里面很难读取到VS中通过简单的方法设置的环境变量，所以必须把连接字符串配置到Windows的正式的环境变量中，然后再 Environment.GetEnvironmentVariable读取。
-    /// 6、正常执行Add-Migration、Update-Database迁移就行了。需要把EFCore项目设置为启动项目，并且在【程序包管理器控制台】中也要选中EFCore项目，并且安装Microsoft.EntityFrameworkCore.SqlServer、Microsoft.EntityFrameworkCore.Tools
+    /// 6、正常执行Add-Migration INit/Add-Migration Update、Update-Database迁移就行了。需要把EFCore项目设置为启动项目，并且在【程序包管理器控制台】中也要选中EFCore项目，并且安装Microsoft.EntityFrameworkCore.SqlServer、Microsoft.EntityFrameworkCore.Tools
     /// </summary>
     internal class MyDbContextFactory : IDesignTimeDbContextFactory<MyDbContext>
     {

@@ -8,5 +8,6 @@
         public string Description { get; set; }
         public double Price { get; set; }
         public DateTime PubDate { get; set; }
+        public Category Category { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace EFCorePractice
     public class MyDbContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 

@@ -1,6 +1,8 @@
 ﻿
 using EFCorePractice;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApplicationWebAPI.Filters;
 
 namespace WebApplicationWebAPI
 {
@@ -25,6 +27,17 @@ namespace WebApplicationWebAPI
             {
                 string connStr = builder.Configuration.GetSection("ConnectionString").Value;
                 opt.UseSqlServer(connStr);
+            });
+
+            //TODO: 什么时候会触发 Resource Filter, Result Filter, Authorization Filter
+            builder.Services.Configure<MvcOptions>(opt =>
+            {
+                //按照注册顺序，倒序触发
+                opt.Filters.Add<MyExceptionFilter>();
+                opt.Filters.Add<LogExceptionFilter>();
+
+                opt.Filters.Add<MyActionFilter>();
+                opt.Filters.Add<RateLimitFilter>();
             });
 
             var app = builder.Build();

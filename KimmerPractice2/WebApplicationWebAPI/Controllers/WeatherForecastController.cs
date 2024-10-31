@@ -36,6 +36,7 @@ namespace WebApplicationWebAPI.Controllers
         [HttpGet]
         public string EnvDemo()
         {
+            throw new ApplicationException("Test Exception Filter");
             return _env.EnvironmentName;
         }
     }
